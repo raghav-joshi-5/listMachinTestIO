@@ -1,0 +1,11 @@
+<ul *ngIf="gettodos.length > 0; else noItem" class="list-group">
+  <li
+    *ngFor="let item of gettodos"
+    class="list-group-item text-white bg-dark mb-2"
+  >
+    {{ item.listItem }}
+  </li>
+</ul>
+<ng-template #noItem>
+  <p class="alert alert-warning">No Item in list</p>
+</ng-template>
